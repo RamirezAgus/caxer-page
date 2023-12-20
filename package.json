@@ -10,9 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-glider": "^4.0.2",
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.20.1",
     "react-select": "^5.8.0"

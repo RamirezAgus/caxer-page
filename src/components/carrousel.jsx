@@ -3,12 +3,6 @@ import imagen1 from '../assets/img/caxer-fondo1.jpg'
 import imagen2 from '../assets/img/caxer-fondo2.jpg'
 import imagen3 from '../assets/img/caxer-fondo3.jpg'
 
-
-/*const slides = [
-    { image: imagen1, text: 'Soluciones de Impresión' },
-    { image: imagen2, text: 'Soluciones de Administrativas' },
-    { image: imagen3, text: 'Soluciones Tecnológicas' }
-]*/
 const slides = [
     { image: imagen1, text: 'Soluciones de Impresión', additionalText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt' },
     { image: imagen2, text: 'Soluciones de Administrativas', additionalText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt' },
@@ -45,17 +39,3 @@ export default function Carrousel() {
         </div>
     )
 }
-
-/*{slides.map((s, index) => {
-    return <img key={index} src={s} alt={`Slide ${index}`}/>
-})}*/
-
-/*
-{slides.map((slide, index) => (
-                    <div key={index} className="">
-                    <img src={slide.image} alt={`Slide ${index + 1}`} className="" />
-                    <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-                      <p className="text-white text-2xl">{slide.text}</p>
-                </div>
-                </div>
-                ))} */
