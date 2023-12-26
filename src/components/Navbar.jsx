@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import '../css/dropdown.css';
-import logo from '../assets/logo-caxer.png'
+import logo from '../assets/logo-caxer-nav.png'
 
 
 export default function Navbar() {

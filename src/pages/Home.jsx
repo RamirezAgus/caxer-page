@@ -1,6 +1,6 @@
 import Carrousel from '../components/carrousel';
 import Footer from '../components/footer';
-import Main from '../components/main';
+import Main from '../components/main copy';
 import Parterns from '../components/partners';
 
 

@@ -1,4 +1,5 @@
 import image1 from '../assets/img/caxer-soluciones.png'
+import image2 from '../assets/img/back-main.png'
 import { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'
@@ -46,17 +47,18 @@ export default function Main() {
     }, [])
 
     return (
-        <section className="flex flex-row justify-evenly md:flex-row items-center bg-cyan-500 w-full h-full">
-            <div className='flex flex-col md:w-1/2'>
-                <div data-aos="fade-right" className='flex flex-col relative z-10 pb-4'>
+        <section className="grid grid-cols-2 gap-4 md:container-lg bg-cyan-600 w-screen h-screen">
+            <div className='flex justify-center relative items-center'>
+                <div data-aos="fade-right" className='flex flex-col relative z-10  pb-4'>
                     <img src={image1} className='p-10 w-full md:w-[28rem] h-auto object-cover' alt="" />
-                </div>
-                <div className='flex flex-col w-1/2 w-full h-full p-10 absolute pb-8'>
-                    <div className='flex bg-cyan-700 mt-6 ml-4 w-full md:w-[25vw] md:max-w-[25rem] h-[32rem]'></div>
+    </div>
+                <div className='flex flex-col absolute right-20 top-5 pb-4'>
+                    <img src={image2} className='p-10 w-full md:w-[28rem] h-auto object-cover' alt="" />
                 </div>
             </div>
-            <div className='flex flex-col md:w-1/2 w-96 items-center text-white'>
-                <div className='flex flex-col w-96 items-center text-white'>
+
+            <div className='flex flex-col w-full items-center text-black'>
+                <div className='flex flex-col items-center text-black'>
                     <h2 className={`font-bold text-3xl text-center pb-4 `}>{texts[currentTextIndex].title}</h2>
                     <p className={`text-lg text-center`}>{texts[currentTextIndex].description}</p>
                 </div>
