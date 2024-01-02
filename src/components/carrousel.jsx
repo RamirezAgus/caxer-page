@@ -24,7 +24,7 @@ export default function Carrousel() {
     }, [current])
 
     return (
-        <div className={`flex transition ease-out duration-500`} style={{ transform: `translateX(-${current * 100}%)` }}>
+        <div className={`flex transition ease-out duration-500 z-40`} style={{ transform: `translateX(-${current * 100}%)` }}>
             {slides.map((slide, index) => (
                 <div key={index} className="w-full">
                     <div className="relative">

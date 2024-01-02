@@ -1,4 +1,5 @@
 import image1 from '../assets/img/caxer-soluciones.png'
+import image2 from '../assets/img/back-main.png'
 import { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'
@@ -46,19 +47,20 @@ export default function Main() {
     }, [])
 
     return (
-        <section className="flex flex-row justify-evenly md:flex-row items-center bg-cyan-500 w-full h-full">
-            <div className='flex flex-col md:w-1/2'>
-                <div data-aos="fade-right" className='flex flex-col relative z-10 pb-4'>
-                    <img src={image1} className='p-10 w-full md:w-[28rem] h-auto object-cover' alt="" />
+        <section className="container md:grid-cols-1 mx-auto grid lg:grid-cols-2 gap-10 md:container-lg bg-cyan-600 w-screen py-10 px-10 relative z-30">
+            <div className='flex justify-center relative items-center'>
+                <div data-aos="fade-right" className='flex flex-col relative z-10'>
+                    <img src={image1} className='p-4 md:p-10 w-full md:w-[420px] h-auto object-cover' alt="" />
                 </div>
-                <div className='flex flex-col w-1/2 w-full h-full p-10 absolute pb-8'>
-                    <div className='flex bg-cyan-700 mt-6 ml-4 w-full md:w-[25vw] md:max-w-[25rem] h-[32rem]'></div>
+                <div className='flex flex-col absolute right-4 top-4 md:right-10 md:top-10 pb-4'>
+                    <img src={image2} className='p-4 md:p-10 w-full md:w-[420px] h-auto object-cover' alt="" />
                 </div>
             </div>
-            <div className='flex flex-col md:w-1/2 w-96 items-center text-white'>
-                <div className='flex flex-col w-96 items-center text-white'>
-                    <h2 className={`font-bold text-3xl text-center pb-4 `}>{texts[currentTextIndex].title}</h2>
-                    <p className={`text-lg text-center`}>{texts[currentTextIndex].description}</p>
+
+            <div className='flex flex-col md:container-sm w-full sm:container-md justify-center items-center'>
+                <div className='flex flex-col max-w-[28rem] md:w-auto sm:w-full h-auto items-center text-white'>
+                    <h2 className={`font-bold text-2xl md:text-3xl lg:text-4xl text-center pb-2 md:pb-4`}>{texts[currentTextIndex].title}</h2>
+                    <p className={`text-base md:text-lg text-center`}>{texts[currentTextIndex].description}</p>
                 </div>
             </div>
         </section>

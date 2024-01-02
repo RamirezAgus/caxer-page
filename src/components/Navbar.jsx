@@ -1,47 +1,76 @@
-import { Link } from "react-router-dom";
-import '../css/dropdown.css';
-import logo from '../assets/logo-caxer-nav.png'
-
+import { useState } from 'react';
+import { FaTimes } from 'react-icons/fa';
+import { RiMenu3Line } from "react-icons/ri";
+import { Link, useLocation } from 'react-router-dom';
+import logo from '../assets/logo-caxer-nav.png';
 
 export default function Navbar() {
+  const [click, setClick] = useState(false);
+  const location = useLocation();
 
-    return (
-        <nav className='flex items-center justify-between f bg-cyan-500 z-10 relative constainer'>
-            <div className='flex item-center'>
-                <Link to='/'><img className="pl-4 w-9/12" src={logo} alt="logo"/></Link>
-            </div>
-            <div className="container mx-auto flex justify-end items-center pr-4">
-                <div className="text-sm flex space-x-4 text-white items-center">
-                    <Link to='/conocenos' className='px-4'>
-                        Conocenos
-                    </Link>
-                    <Link to='/soluciones' className='px-4'>
-                        Soluciones
-                    </Link>
-                    <div className="dropdown inline-block relative">
-                        <button className="bg-cyan-500 text-white py-2 px-4 rounded inline-flex items-center">
-                            <span className="mr-1">Servicios</span>
-                            <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /> </svg>
-                        </button>
-                        <ul className="dropdown-menu absolute hidden text-gray-700 pt-1">
-                            <li className=""><a className="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">One</a></li>
-                            <li className=""><a className="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Two</a></li>
-                            <li className=""><a className="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Three is the magic number</a></li>
-                        </ul>
-                    </div>
-                    <div className="dropdown inline-block relative">
-                        <button className="bg-cyan-500 text-white py-2 px-4 rounded inline-flex items-center">
-                            <span className="mr-1">Post Venta</span>
-                            <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /> </svg>
-                        </button>
-                        <ul className="dropdown-menu absolute hidden text-gray-700 pt-1">
-                            <li className=""><a className="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">One</a></li>
-                            <li className=""><a className="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Two</a></li>
-                            <li className=""><a className="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Three is the magic number</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    )
+  const handleClick = () => {
+    setClick(!click);
+    if (click) {
+      scrollToTop();
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  const navLinks = [
+    { to: '/conocenos', label: 'Conócenos' },
+    { to: '/soluciones', label: 'Soluciones' },
+    { to: '/servicios', label: 'Servicios' },
+    { to: '/contacto', label: 'Contacto' },
+  ];
+
+  const content = (
+    <div className="lg:hidden block absolute top-16 w-full left-0 right-0 transition bg-cyan-500 bg-opacity-70 backdrop-filter backdrop-blur-md">
+      <ul className="text-center text-xl p-20">
+        {navLinks.map((link) => (
+          <li key={link.to} onClick={() => setClick(false)} className="my-8 border-b border-white hover:bg-gray-800 hover:rounded">
+            <Link to={link.to}>{link.label}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+
+  return (
+    <nav className="bg-cyan-500">
+      <div className="h-10vh flex justify-between z-50 text-white lg:py-2 px-8 py-2 relative">
+        <div className="flex items-center flex-1">
+          <Link to="/">
+            <img src={logo} alt="logo" className='pl-4 w-9/12'/>
+          </Link>
+        </div>
+        <div className="lg:flex md:flex lg: flex-1 items-center justify-end font-normal hidden">
+          <div className="flex-10">
+            <ul className="flex gap-8 mr-14 text-[14px]">
+              {navLinks.map((link) => (
+                <li
+                  key={link.to}
+                  onClick={() => setClick(false)}
+                  className={`hover:text-slate-500 transition cursor-pointer ${
+                    location.pathname === link.to ? 'text-slate-500' : ''
+                  }`}
+                >
+                  <Link to={link.to}>{link.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div>{click && content}</div>
+        <button className="block sm:hidden transition" onClick={handleClick}>
+          {click ? <FaTimes /> : <RiMenu3Line />}
+        </button>
+      </div>
+    </nav>
+  );
 }

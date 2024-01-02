@@ -16,10 +16,10 @@ const logos = [
 
 export default function Parterns() {
     return(
-        <section>
-            <h2 className='text-center mt-10 p-5 text-5xl font-bold text-cyan-500'>NUESTROS PARTNERS</h2>
+        <section className='bg-white w-full min-h-screen py-10'>
+            <h2 className='text-center text-2xl py-20 sm:text-3xl md:text-4xl lg:text-5xl font-bold text-cyan-500'>NUESTROS PARTNERS</h2>
             <div className="flex justify-center items-center h-screen">
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-40">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 md:gap-28 lg:gap-40">
                     {logos.map((logo, index) => (
                         <img key={index} src={logo.src} alt={logo.alt} className="w-full auto scale-up"/>
                     ))}

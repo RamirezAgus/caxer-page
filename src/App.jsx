@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css'
-import Navbar from './components/Navbar'
+import Navbar from './components/navBar'
+import Footer from './components/footer'
 import Conocenos from './pages/conocenos'
 import Soluciones from './pages/soluciones'
 import Servicios from './pages/servicios'
@@ -22,6 +23,7 @@ function App() {
           <Route path='/servicios' element={<Servicios />} />
           <Route path='/postventa' element={<PostVenta />} />
         </Routes>
+        <Footer/>
       </div>
     </Router>
   )
