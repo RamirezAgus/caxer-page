@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { RiMenu3Line } from "react-icons/ri";
 import { Link, useLocation } from 'react-router-dom';
@@ -6,6 +6,7 @@ import logo from '../assets/logo-caxer-nav.png';
 
 export default function Navbar() {
   const [click, setClick] = useState(false);
+  const [isFixed, setIsFixed] = useState(false);
   const location = useLocation();
 
   const handleClick = () => {
@@ -26,6 +27,7 @@ export default function Navbar() {
     { to: '/conocenos', label: 'Conócenos' },
     { to: '/soluciones', label: 'Soluciones' },
     { to: '/servicios', label: 'Servicios' },
+    { to: '/postventa', label: 'Post venta' },
     { to: '/contacto', label: 'Contacto' },
   ];
 
@@ -41,8 +43,21 @@ export default function Navbar() {
     </div>
   );
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsFixed(scrollPosition > 100);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.addEventListener('scroll', handleScroll);
+    };
+  },[]);
+
   return (
-    <nav className="bg-cyan-500">
+    <nav className={`bg-cyan-500 ${isFixed ? 'fixed top-0 left-0 w-full z-50' : ''}`}>
       <div className="h-10vh flex justify-between z-50 text-white lg:py-2 px-8 py-2 relative">
         <div className="flex items-center flex-1">
           <Link to="/">
@@ -68,7 +83,7 @@ export default function Navbar() {
         </div>
         <div>{click && content}</div>
         <button className="block sm:hidden transition" onClick={handleClick}>
-          {click ? <FaTimes /> : <RiMenu3Line />}
+          {click ? <FaTimes size='1.5rem' /> : <RiMenu3Line size='1.5rem'/>}
         </button>
       </div>
     </nav>

@@ -47,7 +47,7 @@ export default function Main() {
     }, [])
 
     return (
-        <section className="container md:grid-cols-1 mx-auto grid lg:grid-cols-2 gap-10 md:container-lg bg-cyan-600 w-screen py-10 px-10 relative z-30">
+        <section className="container md:grid-cols-1 mx-auto grid lg:grid-cols-2 gap-10 md:container-lg bg-cyan-500 w-screen py-10 px-10 relative z-30">
             <div className='flex justify-center relative items-center'>
                 <div data-aos="fade-right" className='flex flex-col relative z-10'>
                     <img src={image1} className='p-4 md:p-10 w-full md:w-[420px] h-auto object-cover' alt="" />

@@ -1,7 +1,9 @@
+
+
 export default function Contacto() {
-    return(
-        <div>
+    return (
+       <div>
             Contacto
-        </div>
+       </div>
     )
 }

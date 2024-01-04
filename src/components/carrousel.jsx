@@ -29,7 +29,7 @@ export default function Carrousel() {
                 <div key={index} className="w-full">
                     <div className="relative">
                         <img src={slide.image} alt={`Slide ${index}`} className="max-w-none" />
-                        <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
+                        <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-center p-4">
                             <h2 className="text-white text-2xl mb-2">{slide.text}</h2>
                             <p className="text-white text-lg">{slide.additionalText}</p>
                         </div>

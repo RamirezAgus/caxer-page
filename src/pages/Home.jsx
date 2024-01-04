@@ -5,7 +5,7 @@ import Parterns from '../components/partners';
 
 export default function Home(){
     return(
-        <div className='bg-cyan-600'>
+        <div className='bg-cyan-500'>
             <Carrousel/>
             <Main />
             <Parterns/>
