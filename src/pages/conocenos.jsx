@@ -21,11 +21,12 @@ export default function Conocenos() {
                         <h1>Quienes somos</h1>
                     </div>
                 </div>
-                <div className='container p-10'>
+                <div className='container p-10 mx-auto'>
                     <div className='container md:grid-cols-1 mx-auto grid lg:grid-cols-2 md:container-lg gap-10 mb-12'>
                         <img data-aos="fade-right" src={image2} alt="Imagen 2" className="w-full shadow-[20px_20px_rgba(0,0,0,.15)]" />
                         <div className='flex items-center'>
-                            <p data-aos="fade-zoom-in" className='text-center text-base leading-7 text-cyan-500 font-medium my-5'>Somos una compañía con más de quince años en el mercado argentino,
+                            <p data-aos="fade-zoom-in" className='text-center text-base leading-7 text-cyan-500 font-medium my-5'>
+                                Somos una compañía con más de quince años en el mercado argentino,
                                 ofreciendo Servicios de Impresión y copiado a muchas de las grandes
                                 empresas del país. Quienes ocupan los cargos en la gerencia comercial,
                                 son personas idóneas con amplia trayectoria en el manejo de procesos
@@ -48,7 +49,7 @@ export default function Conocenos() {
                     </div>
                 </div>
                 <div className='container-lg flex flex-col pt-5 mx-10 mb-10'>
-                    <div className='flex '>
+                    <div className='flex'>
                         <p data-aos="fade-zoom-in"
                             data-aos-easing="ease-in-back"
                             data-aos-delay="100"
