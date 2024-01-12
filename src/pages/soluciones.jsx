@@ -30,11 +30,11 @@ export default function Soluciones() {
             <div className="w-full">
                 <div className="relative">
                     <img src={image1} alt='soluciones' className='w-full' />
-                    <div className='absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-white md:text-4xl font-medium tracking-wide'>
+                    <div className='absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-white text-3xl md:text-4xl font-medium tracking-wide'>
                         <h1>Soluciones</h1>
                     </div>
                 </div>
-                <h2 className='flex items-center justify-center text-gray-500 text-3xl my-12 font-medium tracking-wide'>Administración y Monitoreo de Dispositivos</h2>
+                <h2 className='flex items-center text-center justify-center text-gray-500 text-2xl px-4 md:text-3xl my-12 font-medium tracking-wide'>Administración y Monitoreo de Dispositivos</h2>
                 <div className='container p-8 mx-auto mb-10'>
                     <div className='container md:grid-cols-1 grid lg:grid-cols-2 md:container-lg gap-8 justify-items-center'>
                         <img data-aos="fade-right" src={image2} alt='monitoreo' className='w-80 shadow-[20px_20px_rgba(3,124,243,0.73)]' />
@@ -46,15 +46,15 @@ export default function Soluciones() {
                         </div>
                     </div>
                 </div>
-                <h3 className='text-center text-gray-500 text-3xl my-6 tracking-wide'>¿Qué se hace cuando se Digitaliza?</h3>
+                <h3 className='text-center text-gray-500 text-2xl px-4 md:text-3xl my-6 tracking-wide'>¿Qué se hace cuando se Digitaliza?</h3>
                 <div className='container-lg flex justify-center p-4 my-10 '>
-                    <div className='flex flex-col flex-wrap w-fit'>
+                    <div className='flex flex-col flex-wrap w-2/3'>
                         <div
                             data-aos="fade-right"
                             data-aos-delay="50"
                             data-aos-easing="ease-in-sine"
                             className='flex flex-wrap flex-row my-2 items-center'>
-                            <MdOutlineMonitor size='4rem' className='text-cyan-500' />
+                            <MdOutlineMonitor className='text-cyan-500 text-5xl md:text-7xl' />
                             <h3 className='p-2 text-2xl font-bold text-cyan-500'>Captura:</h3>
                             <p className='list-disc font-normal leading-6 p-3 text-gray-500 transition-transform transition-font hover:scale-105 hover:font-medium'>De manera manual, o automática, desde un scanner, multifunción, email, unidades de red y web.</p>
                         </div>
@@ -63,7 +63,7 @@ export default function Soluciones() {
                             data-aos-delay="100"
                             data-aos-easing="ease-in-sine"
                             className='flex flex-wrap flex-row my-6 items-center'>
-                            <FaCog size='4rem' className='text-cyan-500' />
+                            <FaCog className='text-cyan-500 text-5xl md:text-7xl' />
                             <h3 className='p-2 text-2xl font-bold text-cyan-500'>Procesa:</h3>
                             <p className='list-disc font-normal leading-6 p-3 text-gray-500 transition-transform transition-font hover:scale-105 hover:font-medium'>Mejora de imagen, reconocimiento de caracteres (OCR) y codigos de barras, cambio de formatos de archivos.</p>
                         </div>
@@ -72,14 +72,14 @@ export default function Soluciones() {
                             data-aos-delay="150"
                             data-aos-easing="ease-in-sine"
                             className='flex flex-wrap flex-row my-6 items-center'>
-                            <FaPrint size='4rem' className='text-cyan-500' />
+                            <FaPrint className='text-cyan-500 text-5xl md:text-7xl' />
                             <h3 className='p-2 text-2xl font-bold text-cyan-500'>Enruta:</h3>
                             <p className='list-disc font-normal leading-6 p-3 text-gray-500 transition-transform transition-font hover:scale-105 hover:font-medium'>Hacia carpetas compartidas, impresoras, email, y a la mayoría de los ECM del mercado.</p>
                         </div>
                     </div>
                 </div>
-                <hr className="border-gray-400 md:w-2/3 w-full flex items-center justify-center mx-auto" />
-                <h2 className='flex items-center justify-center text-gray-500 text-3xl my-12 font-medium tracking-wide'>Administración y Gestión de Usuarios: Contabilidad y Accesos</h2>
+                <hr className="border-gray-400 w-2/3 flex items-center justify-center mx-auto" />
+                <h2 className='flex items-center justify-center text-center text-gray-500 text-2xl px-4 md:text-3xl my-12 font-medium tracking-wide'>Administración y Gestión de Usuarios: Contabilidad y Accesos</h2>
                 <div className='container p-8 mx-auto mb-10'>
                     <div className='container md:grid-cols-1 grid lg:grid-cols-2 md:container-lg gap-8 justify-items-center'>
                         <img data-aos="fade-right" src={image3} alt='monitoreo' className='w-80 shadow-[20px_20px_rgba(3,124,243,0.73)]' />
@@ -91,7 +91,7 @@ export default function Soluciones() {
                         </div>
                     </div>
                 </div>
-                <h3 className='text-center text-gray-500 text-3xl my-6 tracking-wide'>¿Para qué sirven la contabilidad y el control de accesos?</h3>
+                <h3 className='text-center text-gray-500 text-2xl px-4 md:text-3xl my-6 tracking-wide'>¿Para qué sirven la contabilidad y el control de accesos?</h3>
                 <div className='container-lg flex justify-center p-4 my-10 '>
                     <div className='flex flex-col flex-wrap w-2/3'>
                         <div
@@ -99,7 +99,7 @@ export default function Soluciones() {
                             data-aos-delay="50"
                             data-aos-easing="ease-in-sine"
                             className='flex flex-wrap flex-row my-2 items-center'>
-                            <FaUnlock size='4rem' className='text-cyan-500' />
+                            <FaUnlock className='text-cyan-500 text-5xl md:text-7xl' />
                             <h3 className='p-2 text-2xl font-bold text-cyan-500'>Accesos:</h3>
                             <p className='text-sm list-disc font-normal leading-6 p-3 text-gray-500 transition-transform transition-font hover:scale-105 hover:font-medium'>Permite controlar quién tiene acceso al dispositivo, y de qué manera puede utilizarlo cada usuario (sólo blanco y negro, con máximo de 100 copias color, por ejemplo).</p>
                         </div>
@@ -108,7 +108,7 @@ export default function Soluciones() {
                             data-aos-delay="100"
                             data-aos-easing="ease-in-sine"
                             className='flex flex-wrap flex-row my-6 items-center'>
-                            <FaChartLine size='4rem' className='text-cyan-500' />
+                            <FaChartLine className='text-cyan-500 text-5xl md:text-7xl' />
                             <h3 className='p-2 text-2xl font-bold text-cyan-500'>Reportes:</h3>
                             <p className='text-sm list-disc font-normal leading-6 p-3 text-gray-500 transition-transform transition-font hover:scale-105 hover:font-medium'>Muestra diversidad de reportes con los gastos asociados a usuarios, departamentos, proyectos, etc.</p>
                         </div>
@@ -117,14 +117,14 @@ export default function Soluciones() {
                             data-aos-delay="150"
                             data-aos-easing="ease-in-sine"
                             className='flex flex-wrap flex-row my-6 items-center'>
-                            <MdOutlinePhoneIphone size='4rem' className='text-cyan-500' />
+                            <MdOutlinePhoneIphone className='text-cyan-500 text-5xl md:text-7xl' />
                             <h3 className='p-2 text-2xl font-bold text-cyan-500'>Folow you:</h3>
                             <p className='text-sm list-disc font-normal leading-6 p-3 text-gray-500 transition-transform transition-font hover:scale-105 hover:font-medium'>Bajo el concepto “Follow you” las impresiones se liberan sólo a pedido del usuario, en cualquier dispositivo de la empresa.</p>
                         </div>
                     </div>
                 </div>
-                <hr className="border-gray-400 md:w-2/3 w-full flex items-center justify-center mx-auto" />
-                <h2 className='flex items-center justify-center text-gray-500 text-3xl my-12 font-medium tracking-wide'>Gestor Documental y Workflow</h2>
+                <hr className="border-gray-400 w-2/3 flex items-center justify-center mx-auto" />
+                <h2 className='flex items-center justify-center text-center text-gray-500 text-2xl px-4 md:text-3xl my-12 font-medium tracking-wide'>Gestor Documental y Workflow</h2>
                 <div className='container p-8 mx-auto mb-10'>
                     <div className='container md:grid-cols-1 grid lg:grid-cols-2 md:container-lg gap-8 justify-items-center'>
                         <img data-aos="fade-right" src={image4} alt='monitoreo' className='w-80 shadow-[20px_20px_rgba(3,124,243,0.73)]' />
@@ -137,15 +137,15 @@ export default function Soluciones() {
                         </div>
                     </div>
                 </div>
-                <h3 className='text-center text-gray-500 text-3xl my-6 tracking-wide'>¿Qué hace un Gestor documental?</h3>
+                <h3 className='text-center text-gray-500 text-2xl px-4 md:text-3xl my-6 tracking-wide'>¿Qué hace un Gestor documental?</h3>
                 <div className='container-lg flex justify-center p-4 my-10 '>
-                    <div className='flex flex-col flex-wrap w-fit'>
+                    <div className='flex flex-col flex-wrap w-2/3'>
                         <div
                             data-aos="fade-right"
                             data-aos-delay="50"
                             data-aos-easing="ease-in-sine"
                             className='flex flex-wrap flex-row my-2 items-center'>
-                            <IoIosDocument size='4rem' className='text-cyan-500' />
+                            <IoIosDocument className='text-cyan-500 text-5xl md:text-7xl' />
                             <h3 className='p-2 text-2xl font-bold text-cyan-500'>Administra:</h3>
                             <p className='list-disc font-normal leading-6 p-3 text-gray-500 transition-transform transition-font hover:scale-105 hover:font-medium'>De manera manual, o automática, desde un scanner, multifunción, email, unidades de red y web.</p>
                         </div>
@@ -154,7 +154,7 @@ export default function Soluciones() {
                             data-aos-delay="100"
                             data-aos-easing="ease-in-sine"
                             className='flex flex-wrap flex-row my-6 items-center'>
-                            <FaSearch size='4rem' className='text-cyan-500' />
+                            <FaSearch className='text-cyan-500 text-5xl md:text-7xl' />
                             <h3 className='p-2 text-2xl font-bold text-cyan-500'>Contenidos:</h3>
                             <p className='list-disc font-normal leading-6 p-3 text-gray-500 transition-transform transition-font hover:scale-105 hover:font-medium'>Mejora de imagen, reconocimiento de caracteres (OCR) y codigos de barras, cambio de formatos de archivos.</p>
                         </div>
@@ -163,14 +163,14 @@ export default function Soluciones() {
                             data-aos-delay="150"
                             data-aos-easing="ease-in-sine"
                             className='flex flex-wrap flex-row my-6 items-center'>
-                            <FiRefreshCw size='4rem' className='text-cyan-500' />
+                            <FiRefreshCw className='text-cyan-500 text-5xl md:text-7xl' />
                             <h3 className='p-2 text-2xl font-bold text-cyan-500'>Versionado:</h3>
                             <p className='list-disc font-normal leading-6 p-3 text-gray-500 transition-transform transition-font hover:scale-105 hover:font-medium'>Hacia carpetas compartidas, impresoras, email, y a la mayoría de los ECM del mercado.</p>
                         </div>
                     </div>
                 </div>
-                <hr className="border-gray-400 md:w-2/3 w-full flex items-center justify-center mx-auto" />
-                <h2 className='flex items-center justify-center text-gray-500 text-3xl my-12 font-medium tracking-wide'>Consultoría – Big Data</h2>
+                <hr className="border-gray-400 w-2/3 flex items-center justify-center mx-auto" />
+                <h2 className='flex items-center justify-center text-center text-gray-500 text-2xl px-4 md:text-3xl my-12 font-medium tracking-wide'>Consultoría – Big Data</h2>
                 <div className='container p-8 mx-auto mb-10'>
                     <div className='container md:grid-cols-1 grid lg:grid-cols-2 md:container-lg gap-8 justify-items-center'>
                         <img data-aos="fade-right" src={image5} alt='monitoreo' className='w-80 shadow-[20px_20px_rgba(3,124,243,0.73)]' />
@@ -182,7 +182,7 @@ export default function Soluciones() {
                         </div>
                     </div>
                 </div>
-                <h3 className='text-center text-gray-500 text-3xl my-6 tracking-wide'>Consultoría y Outsourcing</h3>
+                <h3 className='text-center text-gray-500 text-2xl px-4 md:text-3xl my-6 tracking-wide'>Consultoría y Outsourcing</h3>
                 <div className='container-lg flex justify-center p-4 my-10 '>
                     <div className='flex flex-col flex-wrap w-2/3'>
                         <div
@@ -190,7 +190,7 @@ export default function Soluciones() {
                             data-aos-delay="50"
                             data-aos-easing="ease-in-sine"
                             className='flex flex-wrap flex-row my-2 items-center'>
-                            <FaBriefcase size='4rem' className='text-cyan-500' />
+                            <FaBriefcase className='text-cyan-500 text-5xl md:text-7xl' />
                             <h3 className='p-2 text-2xl font-bold text-cyan-500'>Consultoría:</h3>
                             <p className='text-sm list-disc font-normal leading-6 p-3 text-gray-500 transition-transform transition-font hover:scale-105 hover:font-medium'>
                                 Nuestros profesionales están capacitados para participar de reuniones, tanto comerciles como técnicas, hacer un posterior relevamiento del lugar
@@ -203,7 +203,7 @@ export default function Soluciones() {
                             data-aos-delay="100"
                             data-aos-easing="ease-in-sine"
                             className='flex flex-wrap flex-row my-6 items-center'>
-                            <MdOutlineComputer size='4rem' className='text-cyan-500' />
+                            <MdOutlineComputer className='text-cyan-500 text-5xl md:text-7xl' />
                             <h3 className='p-2 text-2xl font-bold text-cyan-500'>Outsourcing:</h3>
                             <p className='text-sm list-disc font-normal leading-6 p-3 text-gray-500 transition-transform transition-font hover:scale-105 hover:font-medium'>
                                 Existen dos modalidades en lo que llamamos "outsourcing". La primera, denominada "in situ", provee los

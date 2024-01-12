@@ -4,9 +4,9 @@ import { Icon } from '@iconify/react'
 
 export default function Footer() {
     return (
-        <section className="bg-slate-950 w-full min-h-screen flex items-center justify-center pt-10">
+        <section className="bg-slate-950 w-full min-h-screen flex items-center justify-center px-8 pt-10">
             <div className="md:w-2/3 w-full px-4 text-white flex flex-col">
-                <div className="w-full text-7xl font-bold">
+                <div className="w-full text-5xl md:text-7xl font-bold">
                     <h1 className="w-full md:w-2/3">¿En que te ayudamos?</h1>
                 </div>
                 <div className="flex mt-8 flex-col md:flex-row md:justify-between">

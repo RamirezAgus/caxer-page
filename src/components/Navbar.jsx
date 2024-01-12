@@ -52,9 +52,13 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.addEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   },[]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  },[location.pathname])
 
   return (
     <nav className={`bg-cyan-500 ${isFixed ? 'fixed top-0 left-0 w-full z-50' : ''}`}>

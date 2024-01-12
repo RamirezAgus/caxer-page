@@ -1,9 +1,9 @@
-
+import FormContact from '../components/formContact'
 
 export default function Contacto() {
     return (
        <div>
-            Contacto
+            <FormContact/>
        </div>
     )
 }
