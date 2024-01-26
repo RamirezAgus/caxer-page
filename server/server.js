@@ -11,12 +11,12 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const transporter = nodemailer.createTransport({
-  host: 'c2031685.ferozo.com',
-  port: '465',
+  host: '',
+  port: '',
   secure: true,
   auth: {
-    user: 'agustin.ramirez@caxer.com.ar',
-    pass: 'Z@pata286'
+    user: '',
+    pass: ''
   }
 })
 
