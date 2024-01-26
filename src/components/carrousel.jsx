@@ -4,9 +4,9 @@ import imagen2 from '../assets/img/caxer-fondo2.jpg'
 import imagen3 from '../assets/img/caxer-fondo3.jpg'
 
 const slides = [
-    { image: imagen1, text: 'Soluciones de Impresión', additionalText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt' },
-    { image: imagen2, text: 'Soluciones de Administrativas', additionalText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt' },
-    { image: imagen3, text: 'Soluciones Tecnológicas', additionalText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt' }
+    { image: imagen1, text: 'Soluciones de Impresión', additionalText: 'Optimice su productividad con nuestras soluciones de impresión avanzadas.' },
+    { image: imagen2, text: 'Soluciones de Administrativas', additionalText: 'Potencie su empresa con nuestras soluciones administrativas, diseñadas para simplificar procesos y mejorar la eficiencia en la gestión de recursos y operaciones.' },
+    { image: imagen3, text: 'Soluciones Tecnológicas', additionalText: 'Nuestras soluciones tecnológicas personalizadas brindan eficiencia y vanguardia a su empresa, desde desarrollo de software hasta servicios de infraestructura.' }
 ]
 
 export default function Carrousel() {
@@ -30,7 +30,7 @@ export default function Carrousel() {
                     <div className="relative">
                         <img src={slide.image} alt={`Slide ${index}`} className="max-w-none" />
                         <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-center p-4">
-                            <h2 className="text-white text-3xl md:text-4xl mb-2">{slide.text}</h2>
+                            <h2 className="text-white text-3xl md:text-4xl mb-2 py-8">{slide.text}</h2>
                             <p className="text-white text-md sm:text-lg">{slide.additionalText}</p>
                         </div>
                     </div>

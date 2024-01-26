@@ -1,9 +1,9 @@
-import FormContact from '../components/formContact'
+import ContactForm from '../components/contactForm'
 
 export default function Contacto() {
     return (
        <div>
-            <FormContact/>
+            <ContactForm/>
        </div>
     )
 }

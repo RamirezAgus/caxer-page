@@ -12,7 +12,7 @@ export default function Footer() {
                 <div className="flex mt-8 flex-col md:flex-row md:justify-between">
                     <p className="w-full md:w-2/3 text-gray-400">To ensure that all Wikipedia content is verifiable, anyone may question an uncited claim. If your work has been tagged</p>
                     <div className="w-44 pt-6 md:pt-0">
-                        <button className="bg-cyan-500 hover:bg-cyan-600 justify-center text-center rounded-lg shadow px-10 py-3 flex items-center">CONTACTANOS</button>
+                        <Link to='/contacto' className="bg-cyan-500 hover:bg-cyan-600 justify-center text-center rounded-lg shadow px-10 py-3 flex items-center">CONTACTANOS</Link>
                     </div>
                 </div>
                 <div className="flex flex-col">
@@ -21,9 +21,9 @@ export default function Footer() {
                             <img className='pl-4 w-9/12' src={logo} alt='logo' />
                         </div>
                         <div className='flex flex-row space-x-8 items-center justify-between'>
-                            <Link to='/about' className='hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase'>nosotros</Link>
+                            <Link to='/conocenos' className='hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase'>nosotros</Link>
                             <Link to='/servicios' className='hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase'>servicios</Link>
-                            <Link to='/contacto' className='hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase'>contacto</Link>
+                            <Link to='/postventa' className='hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase'>post venta</Link>
                             <Link to=''><Icon icon="simple-line-icons:social-facebook" /></Link>
                             <Link to=''><Icon icon="mdi:linkedin" /></Link>
                             <Link to=''><Icon icon="mdi:instagram" /></Link>
