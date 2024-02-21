@@ -1,5 +1,4 @@
 import image1 from '../assets/img/caxer-soluciones.png'
-import image2 from '../assets/img/back-main.png'
 import { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'
