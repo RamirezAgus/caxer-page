@@ -16,9 +16,9 @@ export default function Conocenos() {
         <section className="constainer-lg">
             <div className="w-full">
                 <div className="relative">
-                    <img src={image1} alt='quienes-somos' className='w-full' />
+                    <img src={image1} alt='quienes-somos' className='w-full h-24 md:h-full' />
                     <div className='absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-white md:text-4xl font-medium tracking-wide'>
-                        <h1>Quienes somos</h1>
+                        <h1 className='bg-black bg-opacity-50 bg-black bg-opacity-50 p-6'>Quienes somos</h1>
                     </div>
                 </div>
                 <div className='container p-10 mx-auto'>

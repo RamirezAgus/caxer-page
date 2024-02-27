@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import { RiMenu3Line } from "react-icons/ri";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/logo-caxer.png";
+import logo from "../assets/logo-caxer-nav.svg";
 
 export default function Navbar() {
   const [click, setClick] = useState(false);
