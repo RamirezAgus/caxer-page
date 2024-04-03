@@ -1,6 +1,7 @@
 import Carrousel from '../components/carrousel';
 import Main from '../components/main';
 import Parterns from '../components/partners';
+import Map from '../components/map';
 
 export default function Home(){
     return(
@@ -8,6 +9,7 @@ export default function Home(){
             <Carrousel/>
             <Main />
             <Parterns/>
+            <Map/>
         </div>
     )
 }
