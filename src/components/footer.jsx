@@ -11,8 +11,7 @@ export default function Footer() {
         </div>
         <div className="flex mt-8 flex-col md:flex-row md:justify-between">
           <p className="w-full md:w-2/3 text-gray-400">
-            To ensure that all Wikipedia content is verifiable, anyone may
-            question an uncited claim. If your work has been tagged
+            Ante cualquier duda o sugerencia no dudes en contactarnos!
           </p>
           <div className="w-44 pt-6 md:pt-0">
             <Link

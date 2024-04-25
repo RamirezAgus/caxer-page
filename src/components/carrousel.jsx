@@ -51,7 +51,7 @@ export default function Carrousel() {
               className="max-w-none"
             />
             <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-center p-4">
-              <div className="bg-black bg-opacity-50 bg-black bg-opacity-50 w-full h-[24rem] md:w-[42rem] md:h-[18rem] flex flex-col items-center justify-center">
+              <div className="bg-black bg-opacity-50 w-full h-[24rem] md:w-[42rem] md:h-[18rem] flex flex-col items-center justify-center">
                 <h2 className="text-white text-3xl md:text-4xl mb-2 pt-6">
                   {slide.text}
                 </h2>
