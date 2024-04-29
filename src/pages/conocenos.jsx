@@ -1,6 +1,6 @@
-import image1 from '../assets/img/caxer-fondo-quienes-somos.jpg'
-import image2 from '../assets/img/caxer-conocenos.png'
-import image3 from '../assets/img/caxer-conocenos2.png'
+import image1 from '../assets/img/caxer-fondo-quienes-somos.webp'
+import image2 from '../assets/img/caxer-conocenos.webp'
+import image3 from '../assets/img/caxer-conocenos2.webp'
 import { useEffect } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';

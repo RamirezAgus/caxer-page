@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import imagen1 from "../assets/img/caxer-fondo1.jpg";
-import imagen2 from "../assets/img/caxer-fondo2.jpg";
-import imagen3 from "../assets/img/caxer-fondo3.jpg";
+import imagen1 from "../assets/img/caxer-fondo1.webp";
+import imagen2 from "../assets/img/caxer-fondo2.webp";
+import imagen3 from "../assets/img/caxer-fondo3.webp";
 
 const slides = [
   {
@@ -12,7 +12,7 @@ const slides = [
   },
   {
     image: imagen2,
-    text: "Soluciones de Administrativas",
+    text: "Soluciones Administrativas",
     additionalText:
       "Potencie su empresa con nuestras soluciones administrativas, diseñadas para simplificar procesos y mejorar la eficiencia en la gestión de recursos y operaciones.",
   },

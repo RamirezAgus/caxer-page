@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import image1 from "../assets/img/caxer-servicios.png";
-import image2 from "../assets/img/serviceImg.png";
+import image1 from "../assets/img/caxer-servicios.webp";
+import image2 from "../assets/img/serviceImg.webp";
 import { TbRefreshAlert } from "react-icons/tb";
 import { BiTimer } from "react-icons/bi";
 import { GiAutoRepair } from "react-icons/gi";

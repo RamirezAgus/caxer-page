@@ -17,11 +17,11 @@ import { MdOutlineComputer } from "react-icons/md";
 import SectionSolution from "../components/sectionSolution";
 import DescriptionSolution from "../components/descriptionSolution";
 
-import image1 from "../assets/img/caxer-fondo-soluciones.jpg";
-import image2 from "../assets/img/monitoreo.png";
-import image3 from "../assets/img/consultoria.png";
-import image4 from "../assets/img/contabilidad-accesos.png";
-import image5 from "../assets/img/workflow.png";
+import image1 from "../assets/img/caxer-fondo-soluciones.webp";
+import image2 from "../assets/img/monitoreo.webp";
+import image3 from "../assets/img/consultoria.webp";
+import image4 from "../assets/img/contabilidad-accesos.webp";
+import image5 from "../assets/img/workflow.webp";
 
 export default function SolucionesPage() {
   useEffect(() => {

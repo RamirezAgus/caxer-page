@@ -10,6 +10,7 @@ const markers = [
   {
     id: 1,
     name: "Caxer S.A.",
+    direction: "Zapata 286 - CABA",
     position: { lat: -34.57393625268195, lng: -58.44064125338764 },
   },
 ];
@@ -30,12 +31,12 @@ export default function Map() {
 
   return (
     <section className="w-full min-h-screen">
-      <h2 className="text-center text-2xl pt-10 sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+      <h2 className="text-center text-2xl pt-10 pb-5 sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
         Encontranos
       </h2>
-      <div className="p-10">
+      <div className="mx-5 p-10">
         {isLoaded ? (
-            //-34.57393625268195, -58.44064125338764
+          //-34.57393625268195, -58.44064125338764
           <GoogleMap
             center={{ lat: -34.57393625268195, lng: -58.44064125338764 }}
             zoom={10}
@@ -45,15 +46,20 @@ export default function Map() {
               height: "90vh",
             }}
           >
-            {markers.map(({ id, name, position }) => (
+            {markers.map(({ id, name, position, direction }) => (
               <MarkerF
                 key={id}
                 position={position}
                 onClick={() => handleActiveMarker(id)}
               >
-                {activeMarker === id ? <InfoWindowF onCloseClick={() => setActiveMarker(null)}>
-                    <div>{name}</div>
-                </InfoWindowF> : null}
+                {activeMarker === id ? (
+                  <InfoWindowF onCloseClick={() => setActiveMarker(null)}>
+                    <div>
+                      <p>{name}</p>
+                      <p>{direction}</p>
+                    </div>
+                  </InfoWindowF>
+                ) : null}
               </MarkerF>
             ))}
           </GoogleMap>

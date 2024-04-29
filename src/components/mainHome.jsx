@@ -1,4 +1,4 @@
-import image1 from "../assets/img/caxer-soluciones.png";
+import image1 from "../assets/img/caxer-soluciones.webp";
 import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
