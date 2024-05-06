@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { BsChatText } from "react-icons/bs";
+import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -8,38 +9,55 @@ const ContactForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      name: "",
+      lastname: "",
+      phone: "",
+      email: "",
+      message: "",
+    },
+  });
 
-  const onSubmit = async (data) => {
-    try {
-      const response = { ok: true };
-      if (response.ok) {
-        toast.success("Formulario enviado con exito")
-      }else{
-        toast.error("Error al enviar el formulario")
-      }
-    } catch (error) {
-      toast.error("Error al enviar el formulario", error)
-    }
-    /*try {
-      const response = await fetch("http://localhost:3000/submit-form", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
+  const onSubmit = (data) => {
+    const templateParams = {
+      from_name: data.name,
+      user_name: data.name,
+      user_lastname: data.lastname,
+      user_phone: data.phone,
+      user_email: data.email,
+      message: data.message,
+    };
+
+    emailjs.init(import.meta.env.VITE_USER_ID);
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_USER_ID
+      )
+      .then(() => {
+        console.log("email was sent sucessfully");
+        reset();
+      })
+      .catch((error) => {
+        console.error("error", error);
       });
-      if (response.ok) {
-        console.log("Formulario enviado exitosamente");
-      } else {
-        console.error("Error al enviar el formulario");
-      }
-    } catch (error) {
-      console.error("Error al enviar el formulario", error);
-    }*/
-  };
 
+      try {
+        const response = { ok: true };
+        if (response.ok) {
+          toast.success("Formulario enviado con exito")
+        }else{
+          toast.error("Error al enviar el formulario")
+        }
+      } catch (error) {
+        toast.error("Error al enviar el formulario", error)
+      }
+  };
 
   return (
     <div className="container mx-auto px-12 py-8 flex flex-col md:flex-row justify-evenly">
@@ -64,71 +82,67 @@ const ContactForm = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="mb-4">
             <label
-              htmlFor="nombre"
+              htmlFor="name"
               className="block text-sm font-medium text-gray-700"
             >
               Nombre
             </label>
             <input
               type="text"
-              id="nombre"
-              {...register("nombre", { required: "Este campo es obligatorio" })}
+              id="name"
+              {...register("name", { required: "Este campo es obligatorio" })}
               placeholder="Ingrese su nombre"
               className={`mt-1 p-2 w-full border rounded-sm ${
-                errors.nombre ? "border-cyan-500" : ""
+                errors.name ? "border-cyan-500" : ""
               }`}
             />
-            {errors.nombre && (
-              <p className="text-red-500 text-xs mt-1">
-                {errors.nombre.message}
-              </p>
+            {errors.name && (
+              <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>
             )}
           </div>
           <div className="mb-4">
             <label
-              htmlFor="apellido"
+              htmlFor="lastname"
               className="block text-sm font-medium text-gray-700"
             >
               Apellido
             </label>
             <input
               type="text"
-              id="apellido"
-              {...register("apellido", {
+              id="lastname"
+              {...register("lastname", {
                 required: "Este campo es obligatorio",
               })}
               placeholder="Ingrese su apellido"
               className={`mt-1 p-2 w-full border rounded-sm ${
-                errors.apellido ? "border-cyan-500" : ""
+                errors.lastname ? "border-cyan-500" : ""
               }`}
             />
-            {errors.apellido && (
+            {errors.lastname && (
               <p className="text-red-500 text-xs mt-1">
-                {errors.apellido.message}
+                {errors.lastname.message}
               </p>
             )}
           </div>
         </div>
         <div className="mb-4">
           <label
-            htmlFor="telefono"
+            htmlFor="phone"
             className="block text-sm font-medium text-gray-700"
           >
             Teléfono
           </label>
           <input
             type="text"
-            id="telefono"
-            {...register("telefono", { required: "Este campo es obligatorio" })}
+            id="phone"
+            {...register("phone", { required: "Este campo es obligatorio" })}
             placeholder="Ingrese su número de teléfono"
             className={`mt-1 p-2 w-full border rounded-sm ${
-              errors.telefono ? "border-cyan-500" : ""
+              errors.phone ? "border-cyan-500" : ""
             }`}
           />
-          {errors.telefono && (
-            <p className="text-red-500 text-xs mt-1">
-              {errors.telefono.message}
-            </p>
+          {errors.phone && (
+            <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>
           )}
         </div>
         <div className="mb-4">
@@ -156,23 +170,23 @@ const ContactForm = () => {
         </div>
         <div className="mb-4">
           <label
-            htmlFor="mensaje"
+            htmlFor="message"
             className="block text-sm font-medium text-gray-700"
           >
             Mensaje
           </label>
           <textarea
-            id="mensaje"
-            {...register("mensaje", { required: "Este campo es obligatorio" })}
+            id="message"
+            {...register("message", { required: "Este campo es obligatorio" })}
             placeholder="Ingrese su mensaje"
             rows="4"
             className={`mt-1 p-2 w-full border rounded-sm ${
-              errors.mensaje ? "border-cyan-500" : ""
+              errors.message ? "border-cyan-500" : ""
             }`}
           ></textarea>
-          {errors.mensaje && (
+          {errors.message && (
             <p className="text-red-500 text-xs mt-1">
-              {errors.mensaje.message}
+              {errors.message.message}
             </p>
           )}
         </div>
@@ -183,7 +197,7 @@ const ContactForm = () => {
           Enviar
         </button>
       </form>
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 };
