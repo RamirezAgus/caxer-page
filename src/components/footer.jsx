@@ -59,27 +59,35 @@ export default function Footer() {
           </div>
         </div>
         <hr className="border-gray-600" />
-        <div className="flex flex-row pt-6 pb-6 justify-evenly">
-          <Icon icon="ph:clock" width="18" className="text-gray-500" />
-          <p className="font-light text-gray-600 text-sm font-normal">
-            Lun-vie: 8.30-17.30
-          </p>
-          <Icon
-            icon="teenyicons:direction-outline"
-            width="18"
-            className="text-gray-500"
-          />
-          <p className="font-light text-gray-600 text-sm font-normal">
-            Zapata 286 - CABA (1426)
-          </p>
-          <Icon icon="ph:phone-light" width="18" className="text-gray-500" />
-          <p className="font-light text-gray-600 text-sm font-normal">
-            +54 11 4775-5115
-          </p>
-          <Icon icon="ic:outline-mail" width="18" className="text-gray-600" />
-          <p className="font-light text-gray-600 text-sm font-normal">
-            ventas@caxer.com.ar
-          </p>
+        <div className="flex flex-col md:flex-row pt-6 pb-6 justify-evenly gap-2">
+          <div className="flex flex-row justify-center">
+            <Icon icon="ph:clock" width="18" className="text-gray-500 mr-2" />
+            <p className="font-light text-gray-600 text-sm font-normal">
+              Lun-vie: 8.30-17.30
+            </p>
+          </div>
+          <div className="flex flex-row justify-center">
+            <Icon
+              icon="teenyicons:direction-outline"
+              width="18"
+              className="text-gray-500 mr-2"
+            />
+            <p className="font-light text-gray-600 text-sm font-normal">
+              Zapata 286 - CABA (1426)
+            </p>
+          </div>
+          <div className="flex flex-row justify-center">
+            <Icon icon="ph:phone-light" width="18" className="text-gray-500 mr-2" />
+            <p className="font-light text-gray-600 text-sm font-normal">
+              +54 11 4775-5115
+            </p>
+          </div>
+          <div className="flex flex-row justify-center">
+            <Icon icon="ic:outline-mail" width="18" className="text-gray-600 mr-2" />
+            <p className="font-light text-gray-600 text-sm font-normal">
+              ventas@caxer.com.ar
+            </p>
+          </div>
         </div>
         <hr className="border-gray-600" />
         <p className="w-full text-center my-12 text-gray-600">
