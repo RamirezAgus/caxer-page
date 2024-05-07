@@ -1,10 +1,10 @@
-
+import blogImage from "../assets/img/blogspot"
 
 export default function Card({ blog }) {
   return (
     <div className="h-full w-[250px] m-2 flex-shrink-0 cursor-pointer">
       <div className="rounded-2xl overflow-hidden mb-4 relative h-[200px]">
-        <img src={`/src/assets/img/blogspot${blog.id}.webp`} alt={blog.title}/>
+        <img src={blogImage[blog.id]} alt={blog.title}/>
         <span className="absolute top-3 left-4 border border-blue-200 text-xs rounded-xl px-4 py-2 font-semibold capitalize bg-blue-200">
           {blog.category}
         </span>
