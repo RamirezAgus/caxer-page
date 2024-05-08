@@ -1,70 +1,27 @@
-import {
-  GoogleMap,
-  useLoadScript,
-  MarkerF,
-  InfoWindowF,
-} from "@react-google-maps/api";
-import { useState } from "react";
-
-const markers = [
-  {
-    id: 1,
-    name: "Caxer S.A.",
-    direction: "Zapata 286 - CABA",
-    position: { lat: -34.57393625268195, lng: -58.44064125338764 },
-  },
-];
+import "leaflet/dist/leaflet.css";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 export default function Map() {
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAP_API_KEY,
-  });
-
-  const [activeMarker, setActiveMarker] = useState(null);
-
-  const handleActiveMarker = (marker) => {
-    if (marker === activeMarker) {
-      return;
-    }
-    setActiveMarker(marker);
-  };
-
   return (
     <section className="w-full min-h-screen">
       <h2 className="text-center text-2xl pt-10 pb-5 sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
         Encontranos
       </h2>
-      <div className="mx-5 p-10">
-        {isLoaded ? (
-          //-34.57393625268195, -58.44064125338764
-          <GoogleMap
-            center={{ lat: -34.57393625268195, lng: -58.44064125338764 }}
-            zoom={10}
-            onClick={() => setActiveMarker(null)}
-            mapContainerStyle={{
-              width: "100%",
-              height: "90vh",
-            }}
-          >
-            {markers.map(({ id, name, position, direction }) => (
-              <MarkerF
-                key={id}
-                position={position}
-                onClick={() => handleActiveMarker(id)}
-              >
-                {activeMarker === id ? (
-                  <InfoWindowF onCloseClick={() => setActiveMarker(null)}>
-                    <div>
-                      <p>{name}</p>
-                      <p>{direction}</p>
-                    </div>
-                  </InfoWindowF>
-                ) : null}
-              </MarkerF>
-            ))}
-          </GoogleMap>
-        ) : null}
-      </div>
+      <MapContainer
+        center={[-34.57390985191691, -58.440523158065105]}
+        zoom={13}
+        style={{ height: "500px" }}
+      >
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        />
+        <Marker position={[-34.57390985191691, -58.440523158065105]}>
+          <Popup>
+            Caxer S.A. <br /> Zapata 286.
+          </Popup>
+        </Marker>
+      </MapContainer>
     </section>
   );
 }

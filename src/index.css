@@ -3,7 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +15,13 @@ body {
 
 #root {
     overflow-x: hidden;
+}
+
+.leaflet-container {
+  z-index: 10;
+  height: 500px;
+  width: 50%;
+  margin: auto;
 }
 
 @keyframes scaleUp {
