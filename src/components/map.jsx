@@ -19,7 +19,7 @@ export default function Map() {
       </h2>
       <MapContainer
         center={[-34.57390985191691, -58.440523158065105]}
-        zoom={13}
+        zoom={18}
         style={{ height: "500px" }}
       >
         <TileLayer
