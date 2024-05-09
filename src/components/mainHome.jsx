@@ -17,7 +17,7 @@ export default function Main() {
         "Herramientas que permiten el control remoto de niveles de suministros, contadores, alertas de servicio, reportes de todas las impresoras y MFP instaladas en red.",
     },
     {
-      title: "Adnimistración de gestion de usuarios: Contabilidad y Accesos",
+      title: "Administración de gestion de usuarios: Contabilidad y Accesos",
       description:
         "El Software de gestión de impresión ayuda a las empresas a obtener el control y la gestión de su impresión para reducir costos, aumentar la seguridad de los documentos y permitir los programas de sustentabilidad.",
     },
