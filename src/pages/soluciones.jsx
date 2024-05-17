@@ -96,7 +96,7 @@ export default function SolucionesPage() {
             },
             {
               icon: MdOutlinePhoneIphone,
-              subtitle: "Folow you: ",
+              subtitle: "Follow you: ",
               description:
                 "Bajo el concepto “Follow you” las impresiones se liberan sólo a pedido del usuario, en cualquier dispositivo de la empresa.",
             },

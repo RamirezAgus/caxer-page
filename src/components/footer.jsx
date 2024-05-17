@@ -9,9 +9,9 @@ export default function Footer() {
         <div className="w-full text-5xl md:text-7xl font-bold">
           <h1 className="w-full md:w-2/3">¿En que te ayudamos?</h1>
         </div>
-        <div className="flex mt-8 flex-col md:flex-row md:justify-between">
-          <p className="w-full md:w-2/3 text-gray-400">
-            Ante cualquier duda o sugerencia no dudes en contactarnos!
+        <div className="flex mt-8 flex-col md:flex md:flex-row md:justify-between md:items-center">
+          <p className="w-full md:text-2xl md:w-2/3 text-gray-400">
+            ¡Ante cualquier duda o sugerencia no dudes en contactarnos!
           </p>
           <div className="w-44 pt-6 md:pt-0">
             <Link
@@ -20,6 +20,7 @@ export default function Footer() {
             >
               CONTACTANOS
             </Link>
+            
           </div>
         </div>
         <div className="flex flex-col">
@@ -27,7 +28,7 @@ export default function Footer() {
             <div>
               <img className="pl-4 w-9/12" src={logo} alt="logo" />
             </div>
-            <div className="flex flex-row space-x-8 items-center justify-between">
+            <div className="flex flex-row space-x-8 items-end justify-between">
               <Link
                 to="/conocenos"
                 className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase"
@@ -77,13 +78,21 @@ export default function Footer() {
             </p>
           </div>
           <div className="flex flex-row justify-center">
-            <Icon icon="ph:phone-light" width="18" className="text-gray-500 mr-2" />
+            <Icon
+              icon="ph:phone-light"
+              width="18"
+              className="text-gray-500 mr-2"
+            />
             <p className="font-light text-gray-600 text-sm font-normal">
               +54 11 4775-5115
             </p>
           </div>
           <div className="flex flex-row justify-center">
-            <Icon icon="ic:outline-mail" width="18" className="text-gray-600 mr-2" />
+            <Icon
+              icon="ic:outline-mail"
+              width="18"
+              className="text-gray-600 mr-2"
+            />
             <p className="font-light text-gray-600 text-sm font-normal">
               ventas@caxer.com.ar
             </p>
