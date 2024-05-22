@@ -9,11 +9,11 @@ export const blogs = [
     },
     {
         id: 2,
-		title: 'PTE300',
+		title: 'Voyager 4320 USB-A',
 		description:
-			'Sistema de etiquetado independiente de bajo costo',
-		category: 'Rotuladoras',
-		brand: 'Brother',
+			'Auriculares inalámbricos Bluetooth® para trabajar desde casa o en la oficina',
+		category: 'Auriculares',
+		brand: 'Poly',
     },
     {
         id: 3,
@@ -25,11 +25,11 @@ export const blogs = [
     },
     {
         id: 4,
-		title: 'QL810W',
+		title: 'Sync 40-M',
 		description:
-			'Se conecta fácilmente a su red inalámbrica',
-		category: 'Etiquetadoras',
-		brand: 'Brother',
+			'Convierte cualquier espacio en una sala de conferencias',
+		category: 'Altavoz',
+		brand: 'Poly',
     },
     {
         id: 5,
