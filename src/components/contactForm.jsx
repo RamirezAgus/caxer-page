@@ -74,7 +74,7 @@ const ContactForm = () => {
           <p className="flex items-end font-medium text-xs text-gray-700 w-1/2 text-left ml-4 tracking-wide">
             Además puede comunicrse a través de nuestra línea telefónica al +54
             11 4775-5115 (Lun-vie: 8.30-17.30hs) o por mail a
-            ventas@caxer.com.ar.
+            ventas@caxer.com.ar
           </p>
         </div>
       </div>
