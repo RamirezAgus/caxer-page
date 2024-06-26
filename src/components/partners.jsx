@@ -4,7 +4,8 @@ import logo3 from "../assets/logos/dell-2.svg";
 import logo4 from "../assets/logos/caxer-partner-print-audit.png";
 import logo5 from "../assets/logos/caxer-partner-papercut.png";
 import logo6 from "../assets/logos/umango-logo.png";
-import logo7 from "../assets/logos/lenovo-2.svg";
+//import logo7 from "../assets/logos/lenovo-2.svg";
+import logo7 from "../assets/logos/hyper-logo.png"
 import logo8 from "../assets/logos/logitech-2-1.svg";
 import logo9 from "../assets/logos/poly-logo2.svg";
 

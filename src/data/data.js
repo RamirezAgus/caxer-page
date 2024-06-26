@@ -39,14 +39,7 @@ export const blogs = [
 		category: 'Etiquetadoras',
 		brand: 'Brother',
     },
-	{
-        id: 6,
-		title: 'Lenovo Thinkpad E16',
-		description:
-			'Laptop para empresas de alto rendimiento',
-		category: 'Notebooks',
-		brand: 'Lenovo',
-    },
+	
 	{
         id: 7,
 		title: 'MFC-L8900CDW',
@@ -56,3 +49,15 @@ export const blogs = [
 		brand: 'Brother',
     },
 ]
+
+
+
+
+{/* {
+        id: 6,
+		title: 'Lenovo Thinkpad E16',
+		description:
+			'Laptop para empresas de alto rendimiento',
+		category: 'Notebooks',
+		brand: 'Lenovo',
+    }*/}
