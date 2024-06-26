@@ -7,7 +7,7 @@ import Products from '../components/products';
 export default function Home(){
     return(
         <div className='bg-cyan-500'>
-            <Carrousel/>
+            <Carrousel/>  
             <Products/>
             <Main />
             <Parterns/>

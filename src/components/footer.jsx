@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/logo-caxer.png";
 import { Icon } from "@iconify/react";
+import HpAmplifyLogo from "./hpAmplifylogo";
 
 export default function Footer() {
   return (
@@ -10,21 +11,24 @@ export default function Footer() {
           <h1 className="w-full md:w-2/3">¿En que te ayudamos?</h1>
         </div>
         <div className="flex mt-8 flex-col md:flex md:flex-row md:justify-between md:items-center">
-          <p className="w-full md:text-2xl md:w-2/3 text-gray-400">
+          <p className="w-full md:w-1/2 md:text-2xl md:w-18 text-gray-400">
             ¡Ante cualquier duda o sugerencia no dudes en contactarnos!
           </p>
-          <div className="w-44 pt-6 md:pt-0">
-            <Link
-              to="/contacto"
-              className="bg-cyan-500 hover:bg-cyan-600 transition justify-center text-center rounded-lg shadow px-10 py-3 flex items-center"
-            >
-              CONTACTANOS
-            </Link>
-            
+          <div className="flex pt-6 md:pt-0 gap-8">
+            <button>
+              <Link
+                to="/contacto"
+                className="p-4 bg-cyan-500 hover:bg-cyan-600 transition text-center rounded-lg shadow"
+              >
+                CONTACTANOS
+              </Link>
+            </button>
+
+            <HpAmplifyLogo />
           </div>
         </div>
         <div className="flex flex-col">
-          <div className="flex mt-24 mb-12 flex-row justify-between">
+          <div className="flex mt-12 mb-12 flex-row justify-between">
             <div>
               <img className="pl-4 w-9/12" src={logo} alt="logo" />
             </div>

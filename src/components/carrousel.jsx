@@ -39,7 +39,7 @@ export default function Carrousel() {
 
   return (
     <div
-      className={`flex transition ease-out duration-500 z-40`}
+      className={`flex transition ease-out duration-500 z-30`}
       style={{ transform: `translateX(-${current * 100}%)` }}
     >
       {slides.map((slide, index) => (
@@ -63,6 +63,7 @@ export default function Carrousel() {
           </div>
         </div>
       ))}
+        
     </div>
   );
 }

@@ -74,8 +74,8 @@ export default function Navbar() {
         <div className="flex items-center flex-1">
           <Link to="/">
             <img src={logo} alt="logo" className="pl-4 w-9/12" />
-          </Link>
-        </div>
+          </Link>        
+        </div>       
         <div className="lg:flex md:flex lg: flex-1 items-center justify-end font-normal hidden">
           <div className="flex-10">
             <ul className="flex gap-8 mr-14 text-[14px]">
@@ -98,6 +98,7 @@ export default function Navbar() {
           {click ? <FaTimes size="1.5rem" /> : <RiMenu3Line size="1.5rem" />}
         </button>
       </div>
+      
     </nav>
   );
 }
