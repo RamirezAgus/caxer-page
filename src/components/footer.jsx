@@ -88,7 +88,7 @@ export default function Footer() {
               className="text-gray-500 mr-2"
             />
             <p className="font-light text-gray-600 text-sm font-normal">
-              +54 11 4775-7511
+              +54 11 4773-7511
             </p>
           </div>
           <div className="flex flex-row justify-center">
