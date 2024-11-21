@@ -13,7 +13,7 @@ L.Marker.prototype.options.icon = DefaultIcon;
 
 export default function Map() {
   return (
-    <section className="w-full pb-4">
+    <section className="w-full pb-4 bg-cyan-500">
       <h2 className="text-center text-2xl pt-10 pb-5 sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
         Encontranos
       </h2>

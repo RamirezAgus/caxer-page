@@ -1,7 +1,6 @@
 import image1 from "../assets/img/caxer-soluciones.webp";
 import { useState, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { motion } from "motion/react";
 
 export default function Main() {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -43,21 +42,21 @@ export default function Main() {
     return () => clearInterval(interval);
   }, [texts.length]);
 
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   return (
-    <section className="container md:grid-cols-1 mx-auto grid lg:grid-cols-2 gap-10 md:container-lg bg-cyan-500 w-screen py-10 px-10 relative z-30">
-      <div className="flex justify-center relative items-center">
-        <div data-aos="fade-right" className="flex flex-col relative z-10">
+    <section className="w-full md:grid-cols-1 grid lg:grid-cols-2 gap-10 md:container-lg bg-cyan-500 w-screen py-10 px-10 relative z-30">
+      <motion.div
+        animate={{ x: ["-5vw", "2vw", "0vw"],  transition: { duration: 2, ease: "easeInOut" } }}
+        className="flex justify-center items-center w-full"
+      >
+        <div className="flex flex-col z-10">
           <img
             src={image1}
             className="w-[22rem] h-auto object-cover shadow-[20px_20px_rgba(3,124,243,0.73)]"
             alt=""
           />
         </div>
-      </div>
+      </motion.div>
 
       <div className="flex flex-col md:container-sm w-full sm:container-md justify-center items-center">
         <div className="flex flex-col max-w-[28rem] md:w-auto sm:w-full h-auto items-center text-white">

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import imagen1 from "../assets/img/caxer-fondo1.webp";
 import imagen2 from "../assets/img/caxer-fondo2.webp";
 import imagen3 from "../assets/img/caxer-fondo3.webp";
@@ -25,9 +26,9 @@ const slides = [
 ];
 
 export default function Carrousel() {
-  let [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(0);
 
-  let nextSlide = () => {
+  const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % slides.length);
   };
 
@@ -35,35 +36,43 @@ export default function Carrousel() {
     const intervalId = setInterval(nextSlide, 5000);
 
     return () => clearInterval(intervalId);
-  }, [current]);
+  }, []);
 
   return (
-    <div
-      className={`flex transition ease-out duration-500 z-30`}
-      style={{ transform: `translateX(-${current * 100}%)` }}
-    >
-      {slides.map((slide, index) => (
-        <div key={index} className="w-full">
-          <div className="relative">
-            <img
-              src={slide.image}
-              alt={`Slide ${index}`}
-              className="max-w-none"
-            />
-            <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-center p-4">
-              <div className="bg-black bg-opacity-50 w-full h-[22rem] md:w-[42rem] md:h-[18rem] flex flex-col items-center justify-center">
-                <h2 className="text-white text-3xl md:text-4xl mb-2 pt-2">
-                  {slide.text}
-                </h2>
-                <p className="text-white text-md sm:text-lg p-4">
-                  {slide.additionalText}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      ))}
-        
+    <div className="flex z-30">
+      <AnimatePresence>
+        {slides.map(
+          (slide, index) =>
+            index === current && (
+              <motion.div
+                key={index}
+                className="w-full"
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.8 }}
+              >
+                <div className="w-full">
+                  <div className="relative">
+                    <img
+                      src={slide.image}
+                      alt={`Slide ${index}`}
+                      className="max-w-none object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center text-center justify-center p-4">
+                      <h2 className="text-white text-3xl md:text-4xl mb-2">
+                        {slide.text}
+                      </h2>
+                      <p className="text-white text-md sm:text-lg px-4">
+                        {slide.additionalText}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            )
+        )}
+      </AnimatePresence>
     </div>
   );
 }

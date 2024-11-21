@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import { RiMenu3Line } from "react-icons/ri";
 import { Link, useLocation } from "react-router-dom";
+import { motion } from "motion/react";
 import logo from "../assets/logo-caxer-nav.svg";
 
 export default function Navbar() {
@@ -71,11 +72,15 @@ export default function Navbar() {
       }`}
     >
       <div className="h-10vh flex justify-between z-50 text-white lg:py-2 px-8 py-2 relative">
-        <div className="flex items-center flex-1">
+        <motion.div
+          className="flex items-center justify-start"
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
+        >
           <Link to="/">
-            <img src={logo} alt="logo" className="pl-4 w-9/12" />
-          </Link>        
-        </div>       
+            <img src={logo} alt="logo" className="w-9/12" />
+          </Link>
+        </motion.div>
         <div className="lg:flex md:flex lg: flex-1 items-center justify-end font-normal hidden">
           <div className="flex-10">
             <ul className="flex gap-8 mr-14 text-[14px]">
@@ -98,7 +103,6 @@ export default function Navbar() {
           {click ? <FaTimes size="1.5rem" /> : <RiMenu3Line size="1.5rem" />}
         </button>
       </div>
-      
     </nav>
   );
 }
